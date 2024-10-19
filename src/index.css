@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(100%); }
+  10%, 90% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+.animate-blink {
+  animation: blink 0.7s infinite;
+}
+
+.animate-scrollUp {
+  animation: scrollUp 3s infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
